@@ -15,7 +15,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="text-zinc-700 text-[1.05rem] pt-5 pb-8 flex flex-col font-medium">
+      <div className="text-zinc-700 text-[1.05rem] pt-5 pb-8 flex flex-col justify-center font-medium">
         <h1 className="text-slate-800 text-[2.5rem] leading-tight font-bold">
           Stay updated!
         </h1>

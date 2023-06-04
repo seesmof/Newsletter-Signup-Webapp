@@ -3,7 +3,7 @@ import React from "react";
 const Form = () => {
   return (
     <>
-      <form action="" className="flex flex-col">
+      <form action="" className="flex flex-col justify-center">
         <div className="flex flex-col">
           <label
             htmlFor="email-input"
@@ -16,6 +16,7 @@ const Form = () => {
             placeholder="email@company.com"
             className="px-6 py-2 text-lg border-2 border-gray-300 rounded-md"
             id="email-input"
+            required
           />
           <button
             type="submit"

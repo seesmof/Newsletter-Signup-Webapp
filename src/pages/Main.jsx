@@ -13,7 +13,7 @@ const Main = () => {
           className="w-full"
         />
       </div>
-      <div className="container flex flex-col flex-1 p-6 mx-auto bg-white">
+      <div className="container flex flex-col justify-center flex-1 p-6 mx-auto bg-white">
         <Hero />
         <Form />
       </div>
