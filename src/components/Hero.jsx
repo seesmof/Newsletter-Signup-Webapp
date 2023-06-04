@@ -2,6 +2,17 @@ import React from "react";
 import iconList from "/icon-list.svg";
 
 const Hero = () => {
+  const listItem = (text) => {
+    return (
+      <>
+        <div className="flex flex-row items-center gap-4">
+          <img src={iconList} alt="icon" className="w-5 h-5" />
+          <p className="">{text}</p>
+        </div>
+      </>
+    );
+  };
+
   return (
     <>
       <div className="text-zinc-700 flex flex-col font-medium">
@@ -10,7 +21,11 @@ const Hero = () => {
           Join 60,000+ product managers receiving monthly updates on:
         </p>
 
-        <div className="flex flex-col gap-3"></div>
+        <div className="flex flex-col gap-3">
+          {listItem("Product discovery and building what matters")}
+          {listItem("Measuring to ensure updates are a success")}
+          {listItem("And much more!")}
+        </div>
       </div>
     </>
   );
