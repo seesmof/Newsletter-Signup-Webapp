@@ -15,9 +15,11 @@ const Hero = () => {
 
   return (
     <>
-      <div className="text-zinc-700 flex flex-col font-medium">
-        <h1 className="text-slate-800 text-4xl font-bold">Stay updated!</h1>
-        <p className=" py-6">
+      <div className="text-zinc-700 text-[1.05rem] flex flex-col font-medium">
+        <h1 className="text-slate-800 text-[2.5rem] leading-tight font-bold">
+          Stay updated!
+        </h1>
+        <p className="py-6">
           Join 60,000+ product managers receiving monthly updates on:
         </p>
 
