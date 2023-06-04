@@ -19,7 +19,7 @@ const Form = () => {
           />
           <button
             type="submit"
-            className="bg-slate-800 px-6 py-3 mt-6 font-medium text-white rounded-lg"
+            className="bg-slate-800 px-6 py-4 mt-6 font-medium text-white rounded-lg"
           >
             Subscribe to monthly newsletter
           </button>
