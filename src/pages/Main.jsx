@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import illustrationSignpMobile from "/illustration-sign-up-mobile.svg";
 import Hero from "../components/Hero";
 import Form from "../components/Form";
