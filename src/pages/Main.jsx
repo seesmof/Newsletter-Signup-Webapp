@@ -1,5 +1,7 @@
 import React from "react";
 import illustrationSignpMobile from "/illustration-sign-up-mobile.svg";
+import Hero from "../components/Hero";
+import Form from "../components/Form";
 
 const Main = () => {
   return (
@@ -11,7 +13,10 @@ const Main = () => {
           className="w-full"
         />
       </div>
-      <div className="container flex flex-col flex-1 p-6 mx-auto bg-white"></div>
+      <div className="container flex flex-col flex-1 p-6 py-10 mx-auto bg-white">
+        <Hero />
+        <Form />
+      </div>
     </div>
   );
 };
