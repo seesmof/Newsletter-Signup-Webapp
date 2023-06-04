@@ -2,19 +2,6 @@ import React, { useState } from "react";
 import Button from "./Button";
 
 const Form = () => {
-  const [email, setEmail] = useState("");
-  const [emailError, setEmailError] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!email) {
-      setEmailError("Please enter your email");
-    } else {
-      setEmailError("");
-    }
-    console.log(email);
-  };
-
   return (
     <>
       <form action="" className="flex flex-col justify-center">
