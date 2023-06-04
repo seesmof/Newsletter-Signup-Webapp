@@ -4,6 +4,6 @@
 
 @layer components {
   .button {
-    @apply p-2 px-4 border rounded-full;
+    @apply bg-slate-800 px-6 py-4 font-medium text-white rounded-lg;
   }
 }
