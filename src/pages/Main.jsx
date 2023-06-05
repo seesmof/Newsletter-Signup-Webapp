@@ -1,15 +1,14 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import illustrationSignpMobile from "/illustration-sign-up-mobile.svg";
 import Hero from "../components/Hero";
 import Success from "../components/Success";
+import Button from "../components/Button";
 
 const Main = () => {
   const [emailAddress, setEmailAddress] = useState("");
 
   return (
     <div className="flex flex-col w-full min-h-screen overflow-hidden">
-      <Success className="hidden">{emailAddress}</Success>
-
       <article className="block">
         <div className="w-full">
           <img

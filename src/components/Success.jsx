@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import iconList from "/icon-list.svg";
+import { twMerge } from "tailwind-merge";
 
 const Success = ({ children }) => {
   return (
