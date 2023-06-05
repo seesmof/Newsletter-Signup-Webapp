@@ -8,7 +8,7 @@ const Main = () => {
 
   return (
     <div className="flex flex-col w-full min-h-screen overflow-hidden">
-      <Success className="block">{emailAddress}</Success>
+      <Success className="hidden">{emailAddress}</Success>
 
       <article className="block">
         <div className="w-full">
