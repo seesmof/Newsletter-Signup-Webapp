@@ -16,7 +16,7 @@ const Success = ({ children }) => {
             <p className="font-medium">
               A confirmation email has been sent to{" "}
               <a href="#" className="font-bold">
-                {children}
+                {children ? children : "your email"}
               </a>
               . Please open it and click the button inside to confirm your
               subscription.
