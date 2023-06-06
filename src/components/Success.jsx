@@ -6,7 +6,7 @@ import { twMerge } from "tailwind-merge";
 const Success = ({ children }) => {
   return (
     <>
-      <div className="text-zinc-700 min-h-screen bg-white">
+      <div className="text-zinc-700 absolute z-50 w-full h-screen bg-white">
         <div className="container flex flex-col justify-between h-screen p-6 pb-10 mx-auto">
           <div className="gap-7 flex flex-col flex-1 py-32">
             <img src={iconList} alt=" icon" className="w-16" />
