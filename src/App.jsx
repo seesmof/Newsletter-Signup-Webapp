@@ -5,77 +5,56 @@ import Hero from "./components/Hero";
 import Button from "./components/Button";
 import { twMerge } from "tailwind-merge";
 
-const Success = ({ children }) => {
-  return (
-    <>
-      <div className="text-zinc-700 absolute z-50 w-full h-screen bg-white">
-        <div className="container flex flex-col justify-between h-screen p-6 pb-10 mx-auto">
-          <div className="gap-7 flex flex-col flex-1 py-32">
-            <img src={iconList} alt=" icon" className="w-16" />
-            <h1 className="text-slate-800 text-[2.5rem] leading-[1.1] font-bold">
-              Thanks for subscribing!
-            </h1>
-            <p className="font-medium">
-              A confirmation email has been sent to{" "}
-              <a href="#" className="font-bold">
-                {children ? children : "your email"}
-              </a>
-              . Please open it and click the button inside to confirm your
-              subscription.
-            </p>
-          </div>
-          <Button>Dismiss message</Button>
+function App() {
+  const emailValue = useRef();
+
+  const SuccessModel = ({ children }) => {
+    return (
+      <div className="flex flex-col items-start justify-between w-full min-h-screen">
+        <div className="flex flex-col items-start w-full p-6 mt-40">
+          <img src={iconList} alt="" className="w-16" />
+          <h3 className="text-4xl font-bold text-black">
+            Thanks for subscribing!
+          </h3>
+        </div>
+        <div className="flex flex-col items-center justify-center w-full p-6">
+          <Button
+            onClick={() => {
+              toggleModelVisibility();
+            }}
+          >
+            Dismiss message
+          </Button>
         </div>
       </div>
-    </>
-  );
-};
+    );
+  };
 
-function App() {
-  const emailRef = useRef();
-  const [success, setSuccess] = useState(false);
-  const onSubmit = () => setSuccess(true);
-  const onDismiss = () => setSuccess(false);
+  const toggleModelVisibility = () => {};
 
   return (
     <>
-      <div className="flex flex-col w-full min-h-screen overflow-hidden">
-        <article className="">
-          <div className="w-full">
-            <img
-              src={illustrationSignpMobile}
-              alt="sign up illustration mobile"
-              className="w-full"
-            />
-          </div>
-          <div className="container flex flex-col justify-center flex-1 p-6 mx-auto bg-white">
-            <Hero />
-            <article className="flex flex-col justify-center">
-              <div className="flex flex-col">
-                <label
-                  htmlFor="email-input"
-                  className="text-slate-800 pb-2 text-sm font-bold"
-                >
-                  Email address
-                </label>
-                <input
-                  type="email"
-                  placeholder="email@company.com"
-                  className="px-6 py-2 mb-4 text-lg border-2 border-gray-300 rounded-md"
-                  ref={emailRef}
-                  required
-                />
-                <Button type={"submit"} onClick={onSubmit}>
-                  Subscribe to monthly newsletter
-                </Button>
-              </div>
-            </article>{" "}
-          </div>
-        </article>
+      <div className="flex flex-col">
+        <SuccessModel />
 
-        {success && (
-          <Success onDismiss={onDismiss}>{emailRef.current.value}</Success>
-        )}
+        <img src={illustrationSignpMobile} alt="" />
+
+        <div className="p-6">
+          <Hero />
+
+          <section className="flex flex-col pt-10">
+            <h3 className="font-medium text-black">Email address</h3>
+            <input
+              type="text"
+              className="border-slate-300 w-full px-5 py-2 mt-2 border rounded-md"
+              placeholder="email@company.com"
+              ref={emailValue}
+            />
+            <button className="button mt-6">
+              Subscribe to monthly newsletter
+            </button>
+          </section>
+        </div>
       </div>
     </>
   );

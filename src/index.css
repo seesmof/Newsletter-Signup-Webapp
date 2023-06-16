@@ -4,6 +4,6 @@
 
 @layer components {
   .button {
-    @apply bg-slate-800 hover:bg-red-400 hover:shadow-red-400/60 active:scale-95 hover:shadow-2xl px-6 py-4 font-medium text-white duration-500 rounded-lg;
+    @apply bg-slate-800 hover:bg-red-400 hover:shadow-red-400/60 active:scale-95 hover:shadow-2xl px-6 py-4 font-medium text-white duration-500 rounded-lg w-full;
   }
 }
