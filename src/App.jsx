@@ -1,59 +1,23 @@
 import React, { useRef, useState } from "react";
 import illustrationSignpMobile from "/illustration-sign-up-mobile.svg";
-import iconList from "/icon-list.svg";
 import Hero from "./components/Hero";
-import Button from "./components/Button";
-import { twMerge } from "tailwind-merge";
+import SuccessModal from "./components/SuccessModal";
 
 function App() {
   const emailValue = useRef();
   const [modalVisibility, setModalVisibility] = useState(false);
 
-  const SuccessModal = ({ children }) => {
-    return (
-      <>
-        <div className="flex flex-col items-start justify-between w-full min-h-screen">
-          <div className="flex flex-col items-start w-full p-6 mt-40">
-            <img src={iconList} alt="" className="w-16" />
-            <h3 className="my-6 text-5xl font-bold text-black">
-              Thanks for subscribing!
-            </h3>
-            <p>
-              A confirmation email has been sent to{" "}
-              <span className="font-bold">
-                {children ? children : "your email"}
-              </span>
-              . Please open it and click the button inside to confirm your
-              subscription.
-            </p>
-          </div>
-          <div className="flex flex-col items-center justify-center w-full p-6">
-            <Button
-              onClick={() => {
-                toggleModelVisibility();
-              }}
-            >
-              Dismiss message
-            </Button>
-          </div>
-        </div>
-      </>
-    );
-  };
-
-  const toggleModelVisibility = () => {
-    setModalVisibility(!modalVisibility);
-  };
-
   return (
     <>
       <div className="flex flex-col">
-        <SuccessModal
-          id="model"
-          className={twMerge(modalVisibility ? "block" : "hidden")}
-        >
-          {emailValue.current.value}
-        </SuccessModal>
+        {modalVisibility && (
+          <SuccessModal
+            onClose={() => setModalVisibility(false)}
+            open={modalVisibility}
+          >
+            {emailValue.current.value}
+          </SuccessModal>
+        )}
 
         <img src={illustrationSignpMobile} alt="" />
         <div className="p-6">
@@ -67,7 +31,10 @@ function App() {
               placeholder="email@company.com"
               ref={emailValue}
             />
-            <button className="button mt-6">
+            <button
+              className="button mt-6"
+              onClick={() => setModalVisibility(true)}
+            >
               Subscribe to monthly newsletter
             </button>
           </section>
