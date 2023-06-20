@@ -33,7 +33,11 @@ function App() {
             />
             <button
               className="button mt-6"
-              onClick={() => setModalVisibility(true)}
+              onClick={() => {
+                emailValue.current.value == ""
+                  ? alert("Please enter a valid email")
+                  : setModalVisibility(true);
+              }}
             >
               Subscribe to monthly newsletter
             </button>
