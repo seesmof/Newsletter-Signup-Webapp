@@ -7,9 +7,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Dependencies and build artifacts
+node_modules/
+dist/
+dist-ssr/
 *.local
 
 # Editor directories and files
@@ -21,4 +22,8 @@ dist-ssr
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+*.sw
+
+# Ignore any md file that is not README.md
+*.md
+!README.md
