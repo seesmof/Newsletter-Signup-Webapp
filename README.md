@@ -1,11 +1,11 @@
 <a name="readme-top"></a>
 
 <div align="center">
-    <a href="https://github.com/seesmof/">
-        <img src="./public/logo.svg" alt="Logo" height="80">
-    </a>
+  <a href="https://github.com/seesmof/">
+    <img src="./public/logo.png" alt="Logo" height="80">
+  </a>
 
-<h1 align="center">Newsletter Sign Up with Success message | Frontend Mentor</h1>
+<h1 align="center">Newsletter Sign Up with Success Message centeromponent</h1>
 </div>
 
 ## Table of contents
@@ -23,15 +23,15 @@ This repository contains a simple component of a sign up page with validation an
 
 ## Screenshots
 
-![](./public/mobile.png)
+![The app in mobile view](./public/mobile.png)
 
-![](./public/desktop.png)
+![The app in desktop view](./public/desktop.png)
 
 ## Built with
 
-![](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
-![](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 ## Links
 
