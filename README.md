@@ -27,6 +27,10 @@ This repository contains a simple component of a sign up page with validation an
 
 ![The app in desktop view](./public/desktop.png)
 
+![The app in desktop view with incorrect email entered](./public/desktop-active-error.png.png)
+
+![The app in desktop view with confirmation component](./public/desktop-confirmation.png.png)
+
 ## Built with
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
