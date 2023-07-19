@@ -6,6 +6,8 @@ import BulletItem from "./assets/images/icon-list.svg";
 function App() {
   const email = useRef("");
   const [emailSent, setEmailSent] = useState(false);
+  const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+  const [emailError, setEmailError] = useState(false);
 
   const Confirmation = ({ email = "your inbox" }) => {
     return (
@@ -70,20 +72,35 @@ function App() {
                   onSubmit={(e) => {
                     e.preventDefault();
                     if (email.current.value) {
-                      setEmailSent(true);
+                      if (emailRegex.test(email.current.value)) {
+                        setEmailSent(true);
+                      } else {
+                        setEmailError(true);
+                      }
                     }
                   }}
                 >
-                  <label
-                    htmlFor="email"
-                    className="text-sm font-bold mb-2 accent-orange-500"
-                  >
-                    Email address
-                  </label>
+                  <div className="flex w-full flex-row justify-between">
+                    <label
+                      htmlFor="email"
+                      className="text-sm font-bold mb-2 accent-orange-500"
+                    >
+                      Email address
+                    </label>
+                    {emailError && (
+                      <span className="text-sm text-orange-600">
+                        Valid email required
+                      </span>
+                    )}
+                  </div>
+
                   <input
                     type="email"
                     id="email"
-                    className="w-full ring-2 ring-slate-200 rounded-lg px-4 py-2 font-normal"
+                    className={`w-full ring-2 ring-slate-200 rounded-lg px-4 py-2 font-normal ${
+                      emailError &&
+                      "ring-orange-600 bg-orange-200/50 text-orange-600"
+                    }`}
                     placeholder="email@company.com"
                     required
                     ref={email}
