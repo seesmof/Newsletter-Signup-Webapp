@@ -74,6 +74,7 @@ function App() {
                     if (email.current.value) {
                       if (emailRegex.test(email.current.value)) {
                         setEmailSent(true);
+                        setEmailError(false);
                       } else {
                         setEmailError(true);
                       }
