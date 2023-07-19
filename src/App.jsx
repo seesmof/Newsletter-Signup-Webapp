@@ -35,7 +35,7 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen bg-background w-full flex items-center justify-center">
+      <div className="min-h-screen bg-background font-medium w-full flex items-center justify-center">
         {emailSent ? (
           <Confirmation email={email.current.value} />
         ) : (
@@ -83,7 +83,7 @@ function App() {
                   <input
                     type="email"
                     id="email"
-                    className="w-full ring-2 ring-slate-200 rounded-lg px-4 py-2"
+                    className="w-full ring-2 ring-slate-200 rounded-lg px-4 py-2 font-normal"
                     placeholder="email@company.com"
                     required
                     ref={email}

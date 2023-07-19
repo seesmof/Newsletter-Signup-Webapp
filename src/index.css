@@ -4,6 +4,6 @@
 
 @layer components {
   .button {
-    @apply w-full bg-black text-white py-3 mt-4 rounded-xl;
+    @apply w-full bg-slate-800 text-white p-4 mt-4 rounded-xl duration-500 hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-400/50 active:scale-95;
   }
 }
