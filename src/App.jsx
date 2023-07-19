@@ -44,7 +44,7 @@ function App() {
               <div className="flex flex-col h-full">
                 <img src={HeroMobile} alt="" />
 
-                <section className="flex flex-col py-6 px-4 space-y-4">
+                <section className="flex flex-col p-6 py-8 space-y-4">
                   <h1 className="font-bold text-4xl">Stay updated!</h1>
                   <p>
                     Join 60,000+ product managers receiving monthly updates on:
@@ -88,7 +88,7 @@ function App() {
                     required
                     ref={email}
                   />
-                  <button className="button mt-4">
+                  <button className="button mt-6">
                     Subscribe to monthly newsletter
                   </button>
                 </form>
