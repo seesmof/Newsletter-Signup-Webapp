@@ -13,10 +13,14 @@ function App() {
     return (
       <>
         <div className="min-h-screen bg-background font-medium w-full flex items-center justify-center">
-          <div className="h-screen w-full bg-white flex-col flex">
+          <div className="bg-white lg:rounded-xl h-screen lg:h-min lg:w-max lg:max-w-xl lg:p-6 w-full">
             <div className="flex flex-col p-4 h-full justify-between">
-              <div className="flex flex-col space-y-5 py-24">
-                <img src={BulletItem} alt="" className="w-16 h-16" />
+              <div className="flex flex-col space-y-5 py-24 lg:py-0">
+                <img
+                  src={BulletItem}
+                  alt=""
+                  className="w-16 h-16 lg:w-20 lg:h-20"
+                />
                 <h2 className="font-bold text-3xl">Thanks for subscribing!</h2>
                 <p>
                   A confirmation email has been sent to{" "}
@@ -25,7 +29,7 @@ function App() {
                 </p>
               </div>
               <button
-                className="button self-end"
+                className="button self-end lg:mt-8"
                 onClick={() => setEmailSent(false)}
               >
                 Dismiss message
@@ -45,7 +49,7 @@ function App() {
         <>
           <div className="min-h-screen bg-background font-medium w-full flex items-center justify-center">
             <div className="bg-white lg:rounded-xl h-screen lg:h-min lg:w-max lg:p-6 w-full">
-              <div className="flex flex-col lg:flex-row-reverse h-full">
+              <div className="flex flex-col lg:flex-row-reverse lg:gap-6 h-full">
                 <img
                   src={HeroMobile}
                   alt=""
@@ -54,13 +58,13 @@ function App() {
                 <img src={HeroDesktop} alt="" className="hidden lg:block" />
 
                 <div className="flex flex-col lg:justify-center">
-                  <section className="flex flex-col p-6 py-8 space-y-4">
+                  <section className="flex flex-col p-6 pt-8 space-y-4">
                     <h1 className="font-bold text-4xl">Stay updated!</h1>
                     <p>
                       Join 60,000+ product managers receiving monthly updates
                       on:
                     </p>
-                    <ul className="flex flex-col space-y-3">
+                    <ul className="flex flex-col space-y-3 lg:py-3">
                       <li className="flex flex-row items-center gap-3">
                         <img src={BulletItem} alt="" />
                         Product discovery and building what matters
@@ -107,7 +111,7 @@ function App() {
                     <input
                       type="email"
                       id="email"
-                      className={`w-full ring-2 ring-slate-200 rounded-lg px-4 py-2 font-normal ${
+                      className={`w-full ring-2 ring-slate-200 rounded-lg px-4 py-2 lg:py-3 font-normal ${
                         emailError &&
                         "ring-orange-600 bg-orange-200/50 text-orange-600"
                       }`}
